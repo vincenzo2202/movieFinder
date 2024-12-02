@@ -1,0 +1,29 @@
+<div class="header">
+    <h1>Libero de películas</h1>
+    <button class="logout" (click)="logout()">Salir</button>
+</div>
+<div class="content">
+    <h2>Buscar Películas</h2>
+    <div class="search-bar">
+        <input type="text" [(ngModel)]="searchQuery" (ngModelChange)="onSearchQueryChange($event)"
+            placeholder="Buscar película..." />
+        <button (click)="searchMoviesOnClick()">Buscar</button>
+    </div>
+    <!-- pagination buttoms -->
+    <div class="pagination">
+        <button (click)="previousPage()" [disabled]="currentPage === 1">Anterior</button>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">Siguiente</button>
+    </div>
+
+    <div class="list" *ngIf="movies.length > 0">
+        <li *ngFor="let movie of movies" class="card">
+            <img [src]="movie.Poster !== 'N/A' ? movie.Poster : 'assets/image-not-available.png'"
+                alt="{{ movie.Title }}" />
+            <strong>{{ movie.Title.length > 20 ? (movie.Title | slice:0:20) + '...' : movie.Title }}</strong>
+            <p>{{ movie.Year }}</p>
+        </li>
+    </div>
+    <div *ngIf="movies.length === 0 && searchQuery && searchQuery.trim() !== ''">
+        <p>No se encontraron resultados para "{{ searchQuery }}"</p>
+    </div>
+</div>

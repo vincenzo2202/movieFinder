@@ -4,10 +4,10 @@ import { importProvidersFrom } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app/app.routes';
-import { AuthService } from './app/auth.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { AppRoutingModule } from './app/app.routes';
+import { AuthService } from './app/auth.service';
 
 bootstrapApplication(AppComponent, {
   providers: [

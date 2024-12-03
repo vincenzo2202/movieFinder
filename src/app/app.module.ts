@@ -9,19 +9,22 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
-    declarations: [],
+    declarations: [
+    ],
     imports: [
         BrowserModule,
+        ToastrModule.forRoot(), // Importa ToastrModule
         ReactiveFormsModule,
         HttpClientModule,
         AppRoutingModule,
         BrowserAnimationsModule, // Importa BrowserAnimationsModule
-        ToastrModule.forRoot(), // Importa ToastrModule
         RegisterComponent,
         LoginComponent,
+        DashboardComponent
     ],
     providers: [AuthService],
     bootstrap: [] // No necesitas bootstrap aquí

@@ -6,10 +6,11 @@ import { AuthGuard } from './auth.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 export const routes: Routes = [
-    { path: 'register', component: RegisterComponent },
     { path: 'login', component: LoginComponent },
-    { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }, // Ruta protegida 
-    { path: '', redirectTo: '/login', pathMatch: 'full' }
+    { path: 'register', component: RegisterComponent },
+    { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
+    { path: '**', redirectTo: '/login' }
 ];
 
 @NgModule({

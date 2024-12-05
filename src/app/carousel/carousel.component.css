@@ -4,6 +4,7 @@
     align-items: center;
     overflow: hidden;
     background-color: black;
+    border-radius: 10px;
 }
 
 section {

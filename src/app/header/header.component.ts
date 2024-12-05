@@ -12,6 +12,12 @@ export class HeaderComponent {
 
   constructor(private router: Router) { }
 
+  menuOpen = false;
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+
   logout(): void {
     localStorage.removeItem('token');
     this.router.navigate(['/login']);

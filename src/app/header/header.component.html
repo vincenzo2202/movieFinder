@@ -1,4 +1,17 @@
 <div class="header">
     <h1>MovieFinder 🎬</h1>
-    <button class="logout" (click)="logout()">Salir</button>
+
+    <div class="menu">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+        <span class="material-symbols-outlined" (click)="toggleMenu()">
+            menu
+        </span>
+
+        <div class="dropdown" [class.show]="menuOpen">
+            <a href="#" (click)="logout()">Salir</a>
+            <!-- Puedes agregar más enlaces aquí -->
+            <a href="#">Home</a>
+        </div>
+    </div>
 </div>

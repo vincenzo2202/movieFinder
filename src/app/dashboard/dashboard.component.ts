@@ -5,13 +5,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { debounceTime, distinctUntilChanged, Subject } from 'rxjs';
 import { CarouselComponent } from '../carousel/carousel.component';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
   standalone: true,
-  imports: [RouterModule, CommonModule, FormsModule, CarouselComponent]
+  imports: [RouterModule, CommonModule, FormsModule, CarouselComponent, HeaderComponent]
 })
 export class DashboardComponent implements OnInit, OnDestroy {
   dashboardInfo: any;
@@ -84,10 +85,5 @@ export class DashboardComponent implements OnInit, OnDestroy {
   searchMoviesOnClick(): void {
     this.currentPage = 1;
     this.searchMovies(this.searchQuery, this.currentPage);
-  }
-
-  logout(): void {
-    localStorage.removeItem('token');
-    this.router.navigate(['/login']);
   }
 }

@@ -10,7 +10,7 @@ frontend:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: dist/login-template/browser # Asegúrate de que este sea el directorio de salida correcto
+    baseDirectory: dist/login-template # Asegúrate de que este sea el directorio de salida correcto
     files:
       - '**/*'
   cache:

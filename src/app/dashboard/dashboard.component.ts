@@ -4,13 +4,14 @@ import { DashboardService } from '../services/dashboard.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { debounceTime, distinctUntilChanged, Subject } from 'rxjs';
+import { CarouselComponent } from '../carousel/carousel.component';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
   standalone: true,
-  imports: [RouterModule, CommonModule, FormsModule]
+  imports: [RouterModule, CommonModule, FormsModule, CarouselComponent]
 })
 export class DashboardComponent implements OnInit, OnDestroy {
   dashboardInfo: any;

@@ -19,7 +19,7 @@
 
     <div class="list" *ngIf="movies.length > 0">
         <li *ngFor="let movie of movies" class="card">
-            <img [src]="movie.Poster !== 'N/A' ? movie.Poster : 'assets/image-not-available.png'"
+            <img [src]="movie.Poster !== 'N/A' ? movie.Poster : '../../public/assets/image-not-available.png'"
                 alt="{{ movie.Title }}" />
             <strong>{{ movie.Title.length > 20 ? (movie.Title | slice:0:20) + '...' : movie.Title }}</strong>
             <p>{{ movie.Year }}</p>

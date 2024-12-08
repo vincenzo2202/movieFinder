@@ -6,7 +6,8 @@ El objetivo principal de MovieFinder es buscar, filtrar y mostrar información s
 
 Accede a este link para visualizar el proyecto en producción.
 
-`https://main.d2vjyg47loas9v.amplifyapp.com/`
+Visualiza el proyecto en el siguente enlace: [MovieFinder](https://main.d2vjyg47loas9v.amplifyapp.com/)
+
 
 ## Servidor de desarrollo
 

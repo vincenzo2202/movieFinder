@@ -4,6 +4,10 @@ MovieFinder es un proyecto desarrollado con Angular 19.0.0 que sirve como introd
 
 El objetivo principal de MovieFinder es buscar, filtrar y mostrar información sobre películas, sirviendo como una práctica inicial y didáctica para profundizar en Angular 19.
 
+Accede a este link para visualizar el proyecto en producción.
+
+`https://main.d2vjyg47loas9v.amplifyapp.com/`
+
 ## Servidor de desarrollo
 
 Para iniciar un servidor de desarrollo local, ejecuta:

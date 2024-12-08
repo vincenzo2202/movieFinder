@@ -1,79 +1,86 @@
-/* login.component.css */
+ .logo {
+     margin: 0 auto;
+     margin-top: 1em;
+     display: block;
+     width: 200px;
+     height: 150px;
+ }
 
-/* Estilos generales para el formulario */
-form {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-}
+ /* Estilos generales para el formulario */
+ form {
+     max-width: 400px;
+     margin: 50px auto;
+     padding: 20px;
+     border: 1px solid #ccc;
+     border-radius: 10px;
+     background-color: #f9f9f9;
+     margin-top: 1em;
+ }
 
-/* Estilos para los encabezados */
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
+ /* Estilos para los encabezados */
+ h2 {
+     text-align: center;
+     margin-bottom: 20px;
+     color: #333;
+ }
 
-/* Estilos para los grupos de formulario */
-.form-group {
-    margin-bottom: 15px;
-}
+ /* Estilos para los grupos de formulario */
+ .form-group {
+     margin-bottom: 15px;
+ }
 
-/* Estilos para las etiquetas */
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
+ /* Estilos para las etiquetas */
+ label {
+     display: block;
+     margin-bottom: 5px;
+     font-weight: bold;
+ }
 
-/* Estilos para los campos de entrada */
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
+ /* Estilos para los campos de entrada */
+ input[type="email"],
+ input[type="password"] {
+     width: 100%;
+     padding: 10px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     box-sizing: border-box;
+ }
 
-/* Estilos para los mensajes de error */
-small {
-    color: red;
-    display: block;
-    margin-top: 5px;
-}
+ /* Estilos para los mensajes de error */
+ small {
+     color: red;
+     display: block;
+     margin-top: 5px;
+ }
 
-/* Estilos para el botón de envío */
-button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
+ /* Estilos para el botón de envío */
+ button[type="submit"] {
+     width: 100%;
+     padding: 10px;
+     background-color: #007bff;
+     border: none;
+     border-radius: 5px;
+     color: white;
+     font-size: 16px;
+     cursor: pointer;
+ }
 
-button[type="submit"]:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
+ button[type="submit"]:disabled {
+     background-color: #ccc;
+     cursor: not-allowed;
+ }
 
-/* Estilos para el enlace de registro */
-p {
-    text-align: center;
-    margin-top: 20px;
-}
+ /* Estilos para el enlace de registro */
+ p {
+     text-align: center;
+     margin-top: 20px;
+ }
 
-a {
-    color: #007bff;
-    text-decoration: none;
-}
+ a {
+     color: #007bff;
+     text-decoration: none;
+ }
 
-a:hover {
-    text-decoration: underline;
-}
+ a:hover {
+     text-decoration: underline;
+ }

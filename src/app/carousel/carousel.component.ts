@@ -21,7 +21,6 @@ export class CarouselComponent {
     "../../../public/assets/image8.jpg",
     "../../../public/assets/image9.jpg",
     "../../../public/assets/image10.jpg",
-    "../../../public/assets/image11.jpg",
     "../../../public/assets/image12.jpg",
     "../../../public/assets/image13.jpg",
     "../../../public/assets/image14.jpg",

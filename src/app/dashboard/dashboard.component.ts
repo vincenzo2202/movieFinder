@@ -89,7 +89,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
     this.currentPage = 1;
     this.searchMovies(this.searchQuery, this.currentPage);
   }
-
+  // https://www.themoviedb.org/movie
   defaultMovies(): void {
     this.dashboardService.defaultMovies().subscribe({
       next: (data) => {

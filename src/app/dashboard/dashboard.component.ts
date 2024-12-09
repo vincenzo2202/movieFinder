@@ -21,6 +21,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   private searchSubject = new Subject<string>();
   currentPage: number = 1;
   totalPages: number = 1;
+  default: any[] = [];
 
   constructor(private router: Router, private dashboardService: DashboardService) { }
 
@@ -30,10 +31,12 @@ export class DashboardComponent implements OnInit, OnDestroy {
       distinctUntilChanged()
     ).subscribe(query => {
       this.searchMovies(query, this.currentPage);
+      this.defaultMovies();
     });
 
     // Add event listener for Enter key
     document.addEventListener('keydown', this.handleEnterKey.bind(this));
+    this.defaultMovies(); // Fetch default movies on initialization
   }
 
   ngOnDestroy(): void {
@@ -86,4 +89,23 @@ export class DashboardComponent implements OnInit, OnDestroy {
     this.currentPage = 1;
     this.searchMovies(this.searchQuery, this.currentPage);
   }
+
+  defaultMovies(): void {
+    this.dashboardService.defaultMovies().subscribe({
+      next: (data) => {
+        this.default = data.results || [];
+        console.log('default:', data.results);
+      },
+      error: (err) => {
+        console.error('Error al buscar películas', err);
+      }
+    });
+
+  }
+
+  getImage(poster: string): string {
+    return this.dashboardService.getImage(poster);
+  }
+
+
 }

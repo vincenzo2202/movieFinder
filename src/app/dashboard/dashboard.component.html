@@ -11,21 +11,35 @@
             placeholder="Buscar película..." />
         <button (click)="searchMoviesOnClick()">Buscar</button>
     </div>
-    <!-- pagination buttoms -->
-    <div class="pagination">
-        <button (click)="previousPage()" [disabled]="currentPage === 1">Anterior</button>
-        <button (click)="nextPage()" [disabled]="currentPage === totalPages">Siguiente</button>
-    </div>
-
+    <!-- pagination buttons -->
     <div class="list" *ngIf="movies.length > 0">
-        <li *ngFor="let movie of movies" class="card">
-            <img [src]="movie.Poster !== 'N/A' ? movie.Poster : '../../public/assets/image-not-available.png'"
-                alt="{{ movie.Title }}" />
-            <strong>{{ movie.Title.length > 20 ? (movie.Title | slice:0:20) + '...' : movie.Title }}</strong>
-            <p>{{ movie.Year }}</p>
-        </li>
+        <div class="pagination">
+            <button (click)="previousPage()" [disabled]="currentPage === 1">Anterior</button>
+            <button (click)="nextPage()" [disabled]="currentPage === totalPages">Siguiente</button>
+        </div>
+        <ul class="cardList">
+            <li *ngFor="let movie of movies" class="card">
+                <img [src]="movie.Poster !== 'N/A' ? movie.Poster : '../../public/assets/image-not-available.png'"
+                    alt="{{ movie.Title }}" />
+                <strong>{{ movie.Title.length > 20 ? (movie.Title | slice:0:20) + '...' : movie.Title }}</strong>
+                <p>{{ movie.Year }}</p>
+            </li>
+        </ul>
     </div>
     <div *ngIf="movies.length === 0 && searchQuery && searchQuery.trim() !== ''">
         <p>No se encontraron resultados para "{{ searchQuery }}"</p>
+    </div>
+
+    <!-- peliculas por defecto -->
+    <div class="list" *ngIf="movies.length === 0">
+        <h1>La más vistas del momento</h1>
+        <ul class="cardList" *ngIf="default.length > 0">
+            <li *ngFor="let movie of default" class="card">
+                <img [src]="getImage(movie.poster_path)" alt="{{ movie.original_title }}" />
+                <strong>{{ movie.original_title.length > 20 ? (movie.original_title | slice:0:20) + '...' :
+                    movie.original_title }}</strong>
+                <p>{{ movie.Year }}</p>
+            </li>
+        </ul>
     </div>
 </div>

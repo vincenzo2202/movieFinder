@@ -6,11 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DashboardService {
-
-  private apiUrl = 'https://www.omdbapi.com/?apikey=bfd30579&'
-
-  private themoviedb = 'https://api.themoviedb.org/3/movie'
-
+  private themoviedb = 'https://api.themoviedb.org/3/'
   private image = 'https://image.tmdb.org/t/p/w500'
 
   constructor(private http: HttpClient) { }
@@ -25,13 +21,16 @@ export class DashboardService {
   }
 
   searchMovie(title: string, page: number): Observable<any> {
-    return this.http.get(`${this.apiUrl}s=${title}&page=${page}`);
-  }
+    const headers = this.getHeaders();
+    const url = `${this.themoviedb}search/multi?query=${title}&include_adult=false&language=en-US&page=${page}' `;
 
+
+    return this.http.get(url, { headers });
+  }
 
   defaultMovies(): Observable<any> {
     const headers = this.getHeaders();
-    const url = `${this.themoviedb}/popular?language=en-US&page=1`;
+    const url = `${this.themoviedb}movie/popular?language=en-US&page=1`;
     return this.http.get(url, { headers });
   }
 
@@ -39,5 +38,7 @@ export class DashboardService {
   getImage(poster: string): string {
     return `${this.image}${poster}`;
   }
+
+
 
 }

@@ -5,11 +5,12 @@
     <app-carousel></app-carousel>
 </div>
 <div class="content">
-    <h2>Buscar Películas</h2>
-    <div class="search-bar">
-        <input type="text" [(ngModel)]="searchQuery" (ngModelChange)="onSearchQueryChange($event)"
-            placeholder="Buscar película..." />
-        <button (click)="searchMoviesOnClick()">Buscar</button>
+    <div class="buscador">
+        <div class="search-bar">
+            <input type="text" [(ngModel)]="searchQuery" (ngModelChange)="onSearchQueryChange($event)"
+                placeholder="Buscar una película, serie..." />
+            <button (click)="searchMoviesOnClick()">Buscar</button>
+        </div>
     </div>
     <!-- pagination buttons -->
     <div class="list" *ngIf="movies.length > 0">
@@ -17,12 +18,28 @@
             <button (click)="previousPage()" [disabled]="currentPage === 1">Anterior</button>
             <button (click)="nextPage()" [disabled]="currentPage === totalPages">Siguiente</button>
         </div>
-        <ul class="cardList">
+        <!-- <ul class="cardList">
             <li *ngFor="let movie of movies" class="card">
                 <img [src]="movie.Poster !== 'N/A' ? movie.Poster : '../../public/assets/image-not-available.png'"
                     alt="{{ movie.Title }}" />
                 <strong>{{ movie.Title.length > 20 ? (movie.Title | slice:0:20) + '...' : movie.Title }}</strong>
                 <p>{{ movie.Year }}</p>
+            </li>
+        </ul> -->
+        <ul class="cardList" *ngIf="default.length > 0">
+            <li *ngFor="let movie of movies" class="card">
+                <img [src]="getImage(movie.poster_path)" alt="{{ movie.original_title }}" />
+
+                <strong>
+                    {{ truncateTitle(movie.original_name || movie.original_title) }}
+                </strong>
+
+                <p>{{ formatDate(movie) | date:'dd MMM yyyy' }}</p>
+
+                <div class="average">
+                    {{movie.vote_average | number:'1.1-1'}}
+                </div>
+
             </li>
         </ul>
     </div>

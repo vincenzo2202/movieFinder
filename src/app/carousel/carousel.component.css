@@ -6,6 +6,8 @@
     background-color: black;
     border-radius: 10px;
     position: relative;
+    /* margen derecho e izquierdo */
+    margin: 0 20px;
 }
 
 section {
@@ -23,15 +25,13 @@ section img {
     animation: none;
 }
 
-/* Estado por defecto de todas las imágenes menos la activa */
 section img:not(.active) {
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
     opacity: 0.5;
     transform: scale(0.9);
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* Animación de la imagen activa */
 section img.active {
     width: 100px;
     opacity: 1;
@@ -40,7 +40,6 @@ section img.active {
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* Hover para mantener la animación */
 section img:hover {
     cursor: pointer;
     width: 100px;
@@ -49,7 +48,6 @@ section img:hover {
     transform: scale(1.2);
 }
 
-/* Animación para alternar automáticamente */
 @keyframes slide {
 
     0%,

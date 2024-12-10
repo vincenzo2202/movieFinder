@@ -37,8 +37,15 @@
             <li *ngFor="let movie of default" class="card">
                 <img [src]="getImage(movie.poster_path)" alt="{{ movie.original_title }}" />
                 <strong>{{ movie.original_title.length > 20 ? (movie.original_title | slice:0:20) + '...' :
-                    movie.original_title }}</strong>
-                <p>{{ movie.Year }}</p>
+                    movie.original_title }}
+                </strong>
+                <p>{{movie.release_date| date:'dd MMM yyyy' }}</p>
+
+                <div class="average">
+                    {{movie.vote_average | number:'1.1-1'}}
+                </div>
+
+
             </li>
         </ul>
     </div>

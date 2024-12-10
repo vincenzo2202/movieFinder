@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -6,23 +8,34 @@
     /* Fondo oscuro */
     color: #ffffff;
     /* Texto blanco */
-    padding: 15px 30px;
+    padding: 10px 30px;
     /* Padding para el contenido */
     border-radius: 8px;
     /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra para darle profundidad */
     margin-bottom: 20px;
-    /* Espacio inferior */
+}
+
+.logoText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }
 
 .header h1 {
     margin: 0;
-    /* Elimina el margen predeterminado */
     font-size: 24px;
-    /* Tamaño de fuente */
     font-weight: 700;
-    /* Grosor de la fuente */
+    font-family: "Chewy", system-ui;
+    font-style: normal;
+    color: #FDB94A;
+}
+
+.logo {
+    height: 50px;
+    padding: 0;
+    margin: 0;
 }
 
 .menu {

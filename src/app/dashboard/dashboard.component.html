@@ -32,7 +32,7 @@
 
     <!-- peliculas por defecto -->
     <div class="list" *ngIf="movies.length === 0">
-        <h1>La más vistas del momento</h1>
+        <h1 class="rated">La más vistas del momento</h1>
         <ul class="cardList" *ngIf="default.length > 0">
             <li *ngFor="let movie of default" class="card">
                 <img [src]="getImage(movie.poster_path)" alt="{{ movie.original_title }}" />

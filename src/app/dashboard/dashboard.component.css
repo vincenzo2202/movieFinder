@@ -3,7 +3,10 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* Asegura que el contenedor ocupe toda la altura de la ventana */
+    background-color: #000000;
+    margin: -1em;
+    padding: 1em;
+    color: #ffffff;
 }
 
 .content {
@@ -11,7 +14,6 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
-    background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
@@ -44,6 +46,10 @@
     background-color: #0056b3;
 }
 
+.rated {
+    color: #ffffff;
+}
+
 .list {
     display: flex;
     flex-direction: column;
@@ -52,6 +58,7 @@
     padding: 0;
     margin: 20px 0;
     list-style-type: none;
+    color: #000000;
 }
 
 .cardList {

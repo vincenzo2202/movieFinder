@@ -1,33 +1,61 @@
-.logo {
-    margin: 0 auto;
-    margin-top: 1em;
-    display: block;
-    width: 200px;
-    height: 150px;
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: -8px;
+    padding: 0;
+    background-image: url('../../../public/assets/landing.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    gap: 8em;
 }
 
-/* Estilos generales para el formulario */
+.logo {
+    height: 400px;
+    margin-top: 1em;
+}
+
 form {
-    max-width: 400px;
-    margin: 50px auto;
+    width: 100%;
+    max-width: 500px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #f9f9f9;
+    box-sizing: border-box;
     margin-top: 1em;
 }
 
-/* Estilos para los encabezados */
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+@media (max-width: 768px) {
+    :host {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .logo {
+        height: 200px;
+        /* Reduce la altura de la imagen del logo */
+        margin-top: 0;
+        /* Elimina el margen superior */
+    }
+
+    form {
+        max-width: 100%;
+        /* Asegura que el formulario ocupe todo el ancho disponible */
+        margin-top: 0;
+        /* Elimina el margen superior */
+    }
 }
 
-/* Estilos para los grupos de formulario */
-.form-group {
-    margin-bottom: 20px;
-    /* Aumenta la separación entre los grupos de formulario */
+h2 {
+    text-align: center;
+    color: #333;
+    margin: 0px 0 15px 0;
 }
 
 /* Estilos para las etiquetas */
@@ -45,7 +73,6 @@ input[type="file"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    /* Aumenta la separación entre los campos de entrada */
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;

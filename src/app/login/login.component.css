@@ -1,86 +1,122 @@
- .logo {
-     margin: 0 auto;
-     margin-top: 1em;
-     display: block;
-     width: 200px;
-     height: 150px;
- }
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: -8px;
+    padding: 0;
+    background-image: url('../../../public/assets/landing.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    gap: 8em;
+}
 
- /* Estilos generales para el formulario */
- form {
-     max-width: 400px;
-     margin: 50px auto;
-     padding: 20px;
-     border: 1px solid #ccc;
-     border-radius: 10px;
-     background-color: #f9f9f9;
-     margin-top: 1em;
- }
+.logo {
+    height: 400px;
+    margin-top: 1em;
+}
 
- /* Estilos para los encabezados */
- h2 {
-     text-align: center;
-     margin-bottom: 20px;
-     color: #333;
- }
+/* Estilos generales para el formulario */
+form {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    margin-top: 1em;
+}
 
- /* Estilos para los grupos de formulario */
- .form-group {
-     margin-bottom: 15px;
- }
+@media (max-width: 768px) {
+    :host {
+        flex-direction: column;
+        gap: 2em;
+    }
 
- /* Estilos para las etiquetas */
- label {
-     display: block;
-     margin-bottom: 5px;
-     font-weight: bold;
- }
+    .logo {
+        height: 200px;
+        /* Reduce la altura de la imagen del logo */
+        margin-top: 0;
+        /* Elimina el margen superior */
+    }
 
- /* Estilos para los campos de entrada */
- input[type="email"],
- input[type="password"] {
-     width: 100%;
-     padding: 10px;
-     border: 1px solid #ccc;
-     border-radius: 5px;
-     box-sizing: border-box;
- }
+    form {
+        max-width: 100%;
+        /* Asegura que el formulario ocupe todo el ancho disponible */
+        margin-top: 0;
+        /* Elimina el margen superior */
+    }
+}
 
- /* Estilos para los mensajes de error */
- small {
-     color: red;
-     display: block;
-     margin-top: 5px;
- }
+/* Estilos para los encabezados */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
 
- /* Estilos para el botón de envío */
- button[type="submit"] {
-     width: 100%;
-     padding: 10px;
-     background-color: #007bff;
-     border: none;
-     border-radius: 5px;
-     color: white;
-     font-size: 16px;
-     cursor: pointer;
- }
+/* Estilos para los grupos de formulario */
+.form-group {
+    margin-bottom: 15px;
+}
 
- button[type="submit"]:disabled {
-     background-color: #ccc;
-     cursor: not-allowed;
- }
+/* Estilos para las etiquetas */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
 
- /* Estilos para el enlace de registro */
- p {
-     text-align: center;
-     margin-top: 20px;
- }
+/* Estilos para los campos de entrada */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
 
- a {
-     color: #007bff;
-     text-decoration: none;
- }
+/* Estilos para los mensajes de error */
+small {
+    color: red;
+    display: block;
+    margin-top: 5px;
+}
 
- a:hover {
-     text-decoration: underline;
- }
+/* Estilos para el botón de envío */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Estilos para el enlace de registro */
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

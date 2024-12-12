@@ -47,3 +47,26 @@ Esto compilará tu proyecto y almacenará los artefactos de construcción en el 
 ## Recursos adicionales
 
 Para obtener más información sobre el uso de Angular CLI, incluidas referencias detalladas de comandos, visita la página [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli).
+
+## Imágenes
+
+<!-- imagenes -->
+
+<div style="text-align: center;">
+    <img src="./public/assets/captura1.png" style="width: 1000;" />
+</div>
+<div style="text-align: center;">
+    <img src="./public/assets/captura2.png" style="width: 1000;" />
+</div> 
+<div style="text-align: center;">
+    <img src="./public/assets/captura4.png" style="width: 1000;" />
+</div>
+<div style="text-align: center;">
+    <img src="./public/assets/captura5.png" style="width: 1000;" />
+</div>
+<div style="text-align: center;">
+    <img src="./public/assets/captura6.png" style="width: 1000;" />
+</div>
+
+
+

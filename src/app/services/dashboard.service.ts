@@ -23,6 +23,8 @@ export class DashboardService {
   searchMovie(title: string, page: number): Observable<any> {
     const headers = this.getHeaders();
     const url = `${this.themoviedb}search/multi?query=${title}&include_adult=false&language=en-US&page=${page}' `;
+    console.log('page', page);
+
 
 
     return this.http.get(url, { headers });

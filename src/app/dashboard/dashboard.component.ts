@@ -58,11 +58,11 @@ export class DashboardComponent implements OnInit, OnDestroy {
       this.searchMovies(this.searchQuery, this.currentPage);
     }
   }
-
   nextPage(): void {
-    if (this.currentPage < this.totalPages) {
+    if (this.currentPage >= 1) {
       this.currentPage++;
       this.searchMovies(this.searchQuery, this.currentPage);
+      console.log('Página actual después de incrementar:', this.currentPage);
     }
   }
 
@@ -72,7 +72,6 @@ export class DashboardComponent implements OnInit, OnDestroy {
         next: (data) => {
           this.movies = data.results || [];
           this.totalPages = Math.ceil(data.totalResults / 10);
-          console.log('Resultados de la búsqueda:', this.movies);
         },
         error: (err) => {
           console.error('Error al buscar películas', err);

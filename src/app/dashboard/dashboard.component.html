@@ -18,14 +18,6 @@
             <button (click)="previousPage()" [disabled]="currentPage === 1">Anterior</button>
             <button (click)="nextPage()" [disabled]="currentPage === totalPages">Siguiente</button>
         </div>
-        <!-- <ul class="cardList">
-            <li *ngFor="let movie of movies" class="card">
-                <img [src]="movie.Poster !== 'N/A' ? movie.Poster : '../../public/assets/image-not-available.png'"
-                    alt="{{ movie.Title }}" />
-                <strong>{{ movie.Title.length > 20 ? (movie.Title | slice:0:20) + '...' : movie.Title }}</strong>
-                <p>{{ movie.Year }}</p>
-            </li>
-        </ul> -->
         <ul class="cardList" *ngIf="default.length > 0">
             <li *ngFor="let movie of movies" class="card">
                 <img [src]="movie.poster_path ? getImage(movie.poster_path) : '../../public/assets/image-not-available.png'"

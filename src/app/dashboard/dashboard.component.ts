@@ -62,7 +62,6 @@ export class DashboardComponent implements OnInit, OnDestroy {
     if (this.currentPage >= 1) {
       this.currentPage++;
       this.searchMovies(this.searchQuery, this.currentPage);
-      console.log('Página actual después de incrementar:', this.currentPage);
     }
   }
 

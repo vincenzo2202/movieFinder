@@ -1,9 +1,10 @@
 <div class="header">
     <div class="logoText">
-        <img class="logo" src="../../../public/assets/3-removebg-preview.png" alt="">
-        <h1>MovieFinder</h1>
+        <a (click)="navigateTo('/dashboard')">
+            <img class="logo" src="../../../public/assets/3-removebg-preview.png" alt="">
+            <h1>MovieFinder</h1>
+        </a>
     </div>
-
 
     <div class="menu">
         <link rel="stylesheet"
@@ -13,18 +14,15 @@
         </span>
 
         <div class="dropdown" [class.show]="menuOpen">
-            <!-- home -->
             <a href="/dashboard" (click)="navigateTo('/dashboard')">
                 Inicio
             </a>
-            <!-- about -->
             <a href="/about" (click)="navigateTo('/about')">
                 Nosotros
             </a>
             <a href="#" (click)="logout()">
                 Salir
             </a>
-
         </div>
     </div>
 </div>

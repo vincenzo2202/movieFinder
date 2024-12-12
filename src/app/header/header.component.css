@@ -5,22 +5,19 @@
     justify-content: space-between;
     align-items: center;
     background-color: #352a41;
-    /* Fondo oscuro */
     color: #ffffff;
-    /* Texto blanco */
     padding: 10px 30px;
-    /* Padding para el contenido */
     border-radius: 8px;
-    /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
 
-.logoText {
+.logoText a {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
 }
 
 .header h1 {

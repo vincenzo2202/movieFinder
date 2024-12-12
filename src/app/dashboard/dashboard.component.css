@@ -84,7 +84,7 @@
 
 .card {
     width: 200px;
-    height: 330px;
+    height: 340px;
     background-color: #f8f9fa;
     /* border: 1px solid #ddd; */
     border-radius: 5px;
@@ -92,8 +92,6 @@
     /* padding: 15px; */
     display: flex;
     flex-direction: column;
-
-
 }
 
 .card img {

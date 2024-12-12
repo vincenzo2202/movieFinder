@@ -87,7 +87,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   }
 
   truncateTitle(title: string): string {
-    return title.length > 20 ? title.slice(0, 20) + '...' : title;
+    return title.length > 30 ? title.slice(0, 30) + '...' : title;
   }
 
   formatDate(movie: any): string {

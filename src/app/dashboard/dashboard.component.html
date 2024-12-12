@@ -54,16 +54,26 @@
         <h1 class="rated">La más vistas del momento</h1>
         <ul class="cardList" *ngIf="default.length > 0">
             <li *ngFor="let movie of default" class="card">
-                <img [src]="getImage(movie.poster_path)" alt="{{ movie.original_title }}" />
+                <img [src]="movie.poster_path ? getImage(movie.poster_path) : '../../public/assets/image-not-available.png'"
+                    alt="{{ movie.original_title }}" />
 
-
-                <strong>{{ movie.original_title.length > 20 ? (movie.original_title | slice:0:20) + '...' :
-                    movie.original_title }}
+                <strong>
+                    {{ truncateTitle(movie.original_name || movie.original_title) }}
                 </strong>
-                <p>{{movie.release_date| date:'dd MMM yyyy' }}</p>
+
+                <p>{{ formatDate(movie) | date:'dd MMM yyyy' }}</p>
 
                 <div class="average">
-                    {{movie.vote_average | number:'1.1-1'}}
+                    <ng-container *ngIf="movie.vote_average !== null && movie.vote_average !== undefined; else noVote">
+                        {{ movie.vote_average | number:'1.1-1' }}
+                    </ng-container>
+                    <ng-template #noVote>
+                        <link rel="stylesheet"
+                            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=stars" />
+                        <span class="material-symbols-outlined">
+                            stars
+                        </span>
+                    </ng-template>
                 </div>
 
 

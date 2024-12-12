@@ -13,9 +13,18 @@
         </span>
 
         <div class="dropdown" [class.show]="menuOpen">
-            <a href="#" (click)="logout()">Salir</a>
-            <!-- Puedes agregar más enlaces aquí -->
-            <a href="#">Home</a>
+            <!-- home -->
+            <a href="/dashboard" (click)="navigateTo('/dashboard')">
+                Inicio
+            </a>
+            <!-- about -->
+            <a href="/about" (click)="navigateTo('/about')">
+                Nosotros
+            </a>
+            <a href="#" (click)="logout()">
+                Salir
+            </a>
+
         </div>
     </div>
 </div>

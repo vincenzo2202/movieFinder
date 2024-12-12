@@ -53,12 +53,19 @@
     position: absolute;
     right: 0;
     top: 158%;
-    background-color: #666565;
+    background-color: #4e415c;
     color: #000000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     overflow: hidden;
     z-index: 1000;
+}
+
+.dropdown-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .dropdown a {
@@ -70,7 +77,8 @@
 }
 
 .dropdown a:hover {
-    background-color: #f1f1f1;
+    background-color: #73697e;
+    text-align: center;
 }
 
 .dropdown.show {

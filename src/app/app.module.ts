@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppComponent } from './app.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import { AppComponent } from './app.component';
         BrowserAnimationsModule, // Importa BrowserAnimationsModule
         RegisterComponent,
         LoginComponent,
-        DashboardComponent
+        DashboardComponent,
+        AboutComponent
     ],
     providers: [AuthService],
     bootstrap: [] // No necesitas bootstrap aquí

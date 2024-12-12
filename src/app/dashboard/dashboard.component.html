@@ -22,13 +22,10 @@
             <li *ngFor="let movie of movies" class="card">
                 <img [src]="movie.poster_path ? getImage(movie.poster_path) : '../../public/assets/image-not-available.png'"
                     alt="{{ movie.original_title }}" />
-
                 <strong>
                     {{ truncateTitle(movie.original_name || movie.original_title) }}
                 </strong>
-
                 <p>{{ formatDate(movie) | date:'dd MMM yyyy' }}</p>
-
                 <div class="average">
                     <ng-container *ngIf="movie.vote_average !== null && movie.vote_average !== undefined; else noVote">
                         {{ movie.vote_average | number:'1.1-1' }}
@@ -56,13 +53,10 @@
             <li *ngFor="let movie of default" class="card">
                 <img [src]="movie.poster_path ? getImage(movie.poster_path) : '../../public/assets/image-not-available.png'"
                     alt="{{ movie.original_title }}" />
-
                 <strong>
                     {{ truncateTitle(movie.original_name || movie.original_title) }}
                 </strong>
-
                 <p>{{ formatDate(movie) | date:'dd MMM yyyy' }}</p>
-
                 <div class="average">
                     <ng-container *ngIf="movie.vote_average !== null && movie.vote_average !== undefined; else noVote">
                         {{ movie.vote_average | number:'1.1-1' }}
@@ -75,8 +69,6 @@
                         </span>
                     </ng-template>
                 </div>
-
-
             </li>
         </ul>
     </div>

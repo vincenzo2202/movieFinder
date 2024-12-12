@@ -43,23 +43,6 @@ ng build
 
 Esto compilará tu proyecto y almacenará los artefactos de construcción en el directorio `dist/`. Por defecto, la construcción de producción optimiza tu aplicación para rendimiento y velocidad.
 
-## Ejecución de pruebas unitarias
-
-Para ejecutar pruebas unitarias con el corredor de pruebas [Karma](https://karma-runner.github.io), usa el siguiente comando:
-
-```bash
-ng test
-```
-
-## Ejecución de pruebas de extremo a extremo
-
-Para pruebas de extremo a extremo (e2e), ejecuta:
-
-```bash
-ng e2e
-```
-
-Angular CLI no viene con un marco de pruebas de extremo a extremo por defecto. Puedes elegir uno que se adapte a tus necesidades.
 
 ## Recursos adicionales
 
